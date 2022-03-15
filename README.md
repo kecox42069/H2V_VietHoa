@@ -9,4 +9,4 @@ Việt hóa đơn giản chỉ là một file ini custom localization cho [Halo 
 # Kết
 Trong lúc đợi Việt hóa ra mắt bạn có thể [mua bản quyền Halo 2](http://goo.gl/oyQBc) (khá là hiếm) hoặc "thuốc" nó thế nào cũng được chỉ cần là phiên bản mới nhất để sử dụng bản mod [Halo 2: Project Cartographer](http://www.halo2pc.com/)
 
-Cảm ơn vì đã xem ra repo này. Chúc bạn một ngày tốt lành!
+Cảm ơn vì đã xem qua repo này. Chúc bạn một ngày tốt lành!
