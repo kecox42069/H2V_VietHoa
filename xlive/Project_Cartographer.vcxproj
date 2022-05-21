@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDedicatedServer|Win32">
+      <Configuration>DebugDedicatedServer</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DC9655D6-D9C0-4837-8A63-B0693EEED4E8}</ProjectGuid>
+    <ProjectName>xlive</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDedicatedServer|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDedicatedServer|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Halo2\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\Directx SDK\include;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include;C:\Program Files (x86)\Microsoft Visual Studio\Shared\14.0\VC\include;$(IncludePath)</IncludePath>
+    <LibraryPath>3rdparty/directx/lib;3rdparty/discord;3rdparty/libcurl;3rdparty/miniupnpc/lib;3rdparty/detours/lib.X86;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib;C:\Program Files (x86)\Microsoft Visual Studio\Shared\14.0\VC\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Halo2\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;.\libs;..\protobuf-2.6.1\vsprojects\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;.\;..\protobuf-2.6.1;$(IncludePath)</IncludePath>
+    <LibraryPath>3rdparty/directx/lib;3rdparty/discord;3rdparty/libcurl;3rdparty/miniupnpc/lib;3rdparty/detours/lib.X86;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib;C:\Program Files (x86)\Microsoft Visual Studio\Shared\14.0\VC\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\Directx SDK\include;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include;C:\Program Files (x86)\Microsoft Visual Studio\Shared\14.0\VC\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDedicatedServer|Win32'">
+    <OutDir>$(SolutionDir)Halo2\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;.\libs;..\protobuf-2.6.1\vsprojects\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;.\;..\protobuf-2.6.1;$(IncludePath)</IncludePath>
+    <LibraryPath>..\protobuf-2.6.1\vsprojects\Debug;.\libs;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib;C:\Program Files (x86)\Microsoft Visual Studio\Shared\14.0\VC\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\Directx SDK\include;..\protobuf-2.6.1;.\;.\google;.\teamlog;.\teamspeak;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include;C:\Program Files (x86)\Microsoft Visual Studio\Shared\14.0\VC\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/xliveless.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;CURL_STATICLIB;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;_USRDLL;xliveless_EXPORTS;MINIUPNP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeaderOutputFile>.\Release/xliveless.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>.\;.\3rdparty\;.\3rdparty\libcurl;.\3rdparty\imgui;.\3rdparty\spdlog\include;.\3rdparty\miniupnpc\include;.\3rdparty\detours\include;.\3rdparty\directx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4800;4244</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>iphlpapi.lib;version.lib;Crypt32.lib;Shlwapi.lib;Dbghelp.lib;ws2_32.lib;odbc32.lib;odbccp32.lib;Winmm.lib;d3dx9.lib;discord-rpc.lib;libssl.lib;libcrypto.lib;nghttp2.lib;detours.lib;libminiupnpc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\xlive.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>.\Release/xlive.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Release/xlive.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <LinkStatus>
+      </LinkStatus>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/xliveless.bsc</OutputFile>
+    </Bscmake>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/xliveless.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;CURL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;_USRDLL;xliveless_EXPORTS;MINIUPNP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeaderOutputFile>.\Debug/xliveless.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.\;.\3rdparty\;.\3rdparty\libcurl;.\3rdparty\imgui;.\3rdparty\spdlog\include;.\3rdparty\miniupnpc\include;.\3rdparty\detours\include;.\3rdparty\directx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <DisableSpecificWarnings>4800;4244</DisableSpecificWarnings>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>iphlpapi.lib;version.lib;Crypt32.lib;Shlwapi.lib;Dbghelp.lib;ws2_32.lib;odbc32.lib;odbccp32.lib;Winmm.lib;d3dx9.lib;discord-rpc-debug.lib;libssl.lib;libcrypto.lib;nghttp2.lib;detours.lib;libminiupnpc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\xlive.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>./Debug/xlive.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>./Debug/xlive.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/xliveless.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDedicatedServer|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/xliveless.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;CURL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;_USRDLL;xliveless_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeaderOutputFile>.\Debug/xliveless.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)xlive\libcurl;$(SolutionDir)xlive\3rdparty\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <DisableSpecificWarnings>4800;4244</DisableSpecificWarnings>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>version.lib;Crypt32.lib;Shlwapi.lib;Dbghelp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;ws2_32.lib;libprotobuf.lib;d3d9.lib;d3dx9.lib;Winmm.lib;discord/discord-rpc-debug.lib;libminiupnpc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\xlive.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>./Debug/xlive.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>./Debug/xlive.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <OutputFile>C:\Program Files (x86)\Microsoft Games\Halo 2 Dedicated Server\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/xliveless.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="3rdparty\imgui\backends\imgui_impl_dx9.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\backends\imgui_impl_win32.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui_demo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui_draw.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui_tables.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui_widgets.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="3rdparty\tinyxml\tinyxml2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Blam\Engine\DataArray\TagDataIterator.cpp" />
+    <ClCompile Include="Blam\Engine\Game\GameEngineGlobals.cpp" />
+    <ClCompile Include="Blam\Engine\Game\GameGlobals.cpp" />
+    <ClCompile Include="Blam\Engine\Game\GameTimeGlobals.cpp" />
+    <ClCompile Include="Blam\Engine\Game\PhysicsConstants.cpp" />
+    <ClInclude Include="Blam\Engine\IceCreamFlavor\IceCreamFlavor.h" />
+    <ClInclude Include="Blam\Engine\Networking\NetworkCommon.h" />
+    <ClCompile Include="Blam\Engine\Players\Players.cpp" />
+    <ClCompile Include="Blam\LazyBlam\LazyBlamLoader.cpp" />
+    <ClCompile Include="Blam\LazyBlam\LazyBlamRebase.cpp" />
+    <ClCompile Include="Blam\Math\real_vector3d.cpp" />
+    <ClCompile Include="H2MOD\Engine\Engine.cpp" />
+    <ClCompile Include="H2MOD\Engine\Objects.cpp" />
+    <ClCompile Include="H2MOD\Engine\Unit.cpp" />
+    <ClCompile Include="H2MOD\EngineHooks\EngineHooks.cpp" />
+    <ClCompile Include="H2MOD\GUI\imgui_integration\AdvancedSettings.cpp" />
+    <ClCompile Include="H2MOD\GUI\imgui_integration\debug_overlay.cpp" />
+    <ClCompile Include="H2MOD\GUI\imgui_integration\ImGui_Cartographer_Style.cpp" />
+    <ClCompile Include="H2MOD\GUI\imgui_integration\ImGui_Handler.cpp" />
+    <ClCompile Include="H2MOD\GUI\imgui_integration\ImGui_NetworkStatsOverlay.cpp" />
+    <ClCompile Include="H2MOD\GUI\imgui_integration\MessageBox.cpp" />
+    <ClCompile Include="H2MOD\GUI\imgui_integration\MOTD.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\Accounts\c_account_create_menu.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\Accounts\c_account_list_menu.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\c_brightness_menu.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\c_error_menu.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\c_screen_widget.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\c_user_interface_widget.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\c_virtual_keyboard_menu.cpp" />
+    <ClCompile Include="H2MOD\Modules\MapManager\CustomMapDataCache\CustomMapDataCache.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomResolutions\CustomResolutions.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomVariantSettings\CustomVariantSettings.cpp" />
+    <ClCompile Include="H2MOD\Modules\DirectorHooks\DirectorHooks.cpp" />
+    <ClCompile Include="H2MOD\Modules\EventHandler\EventHandler.cpp" />
+    <ClCompile Include="H2MOD\Modules\GamePhysics\MeleeLunge.cpp" />
+    <ClCompile Include="H2MOD\Modules\HaloScript\HaloScript.cpp" />
+    <ClCompile Include="H2MOD\Modules\GamePhysics\Patches\MeleeFix.cpp" />
+    <ClCompile Include="H2MOD\Modules\HudElements\HudElements.cpp" />
+    <ClCompile Include="H2MOD\Modules\Input\ControllerInput.cpp" />
+    <ClCompile Include="H2MOD\Modules\Input\KeyboardInput.cpp" />
+    <ClCompile Include="H2MOD\Modules\Input\PlayerControl.cpp" />
+    <ClCompile Include="H2MOD\Modules\KantTesting\KantTesting.cpp" />
+    <ClCompile Include="H2MOD\Modules\MainLoopPatches\TestGameTimePrep.cpp" />
+    <ClCompile Include="H2MOD\Modules\MainLoopPatches\UncappedFPS2\UncappedFPS2.cpp" />
+    <ClCompile Include="H2MOD\Modules\MainLoopPatches\OriginalFPSLimiter\OriginalFPSLimiter.cpp" />
+    <ClCompile Include="H2MOD\Modules\MainMenu\MapSlots.cpp" />
+    <ClCompile Include="H2MOD\Modules\MapManager\MapManager.cpp" />
+    <ClCompile Include="Blam\Engine\Networking\NetworkMessageTypeCollection.cpp" />
+    <ClCompile Include="Blam\Engine\Memory\bitstream.cpp" />
+    <ClCompile Include="Blam\Engine\Networking\Transport\NetworkChannel.cpp" />
+    <ClCompile Include="Blam\Engine\Networking\Transport\NetworkObserver.cpp" />
+    <ClCompile Include="Blam\Engine\Networking\Session\NetworkSession.cpp" />
+    <ClCompile Include="H2MOD\Modules\Networking\OverridePackets\OverridePackets.cpp" />
+    <ClCompile Include="H2MOD\Modules\ObserverMode\ObserverMode.cpp" />
+    <ClCompile Include="H2MOD\Modules\PlayerRepresentation\PlayerRepresentation.cpp" />
+    <ClCompile Include="H2MOD\Modules\PlaylistLoader\PlaylistLoader.cpp" />
+    <ClCompile Include="H2MOD\Modules\RenderHooks\RenderHooks.cpp" />
+    <ClCompile Include="H2MOD\Modules\Shell\Shell.cpp" />
+    <ClCompile Include="H2MOD\Modules\Shell\Startup\WinMainH2.cpp" />
+    <ClCompile Include="H2MOD\Modules\SpecialEvents\SpecialEvents.cpp" />
+    <ClCompile Include="H2MOD\Modules\Stats\StatsHandler.cpp" />
+    <ClCompile Include="H2MOD\Modules\TagFixes\TagFixes.cpp" />
+    <ClCompile Include="H2MOD\Modules\UI\Pregame_Lobby.cpp" />
+    <ClCompile Include="H2MOD\Modules\UI\XboxLiveTaskProgress.cpp" />
+    <ClCompile Include="H2MOD\Tags\MetaExtender.cpp" />
+    <ClCompile Include="H2MOD\Tags\TagInterface.cpp" />
+    <ClCompile Include="H2MOD\Variants\FireFight\DeviceShop\DeviceShop.cpp" />
+    <ClCompile Include="H2MOD\Variants\XboxTick\XboxTick.cpp" />
+    <ClCompile Include="H2MOD\Tags\MetaLoader\cache_loader.cpp" />
+    <ClCompile Include="H2MOD\Tags\MetaLoader\meta_struct.cpp" />
+    <ClCompile Include="H2MOD\Tags\MetaLoader\tag_loader.cpp" />
+    <ClCompile Include="H2MOD\Modules\Shell\ServerConsole.cpp" />
+    <ClCompile Include="Blam\LazyBlam\LazyBlam.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugDedicatedServer|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Util\ClipboardAPI.cpp" />
+    <ClCompile Include="Util\curl-interface.cpp" />
+    <ClCompile Include="Util\log.cpp" />
+    <ClCompile Include="Util\Memory.cpp" />
+    <ClCompile Include="XLive\Cryptography\Rc4.cpp" />
+    <ClCompile Include="Blam\FileSystem\FiloInterface.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugDedicatedServer|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="H2MOD.cpp" />
+    <ClCompile Include="H2MOD\Discord\DiscordInterface.cpp" />
+    <ClCompile Include="H2MOD\GUI\GUI.cpp" />
+    <ClCompile Include="H2MOD\Modules\Accounts\AccountCreate.cpp" />
+    <ClCompile Include="H2MOD\Modules\Accounts\AccountLogin.cpp" />
+    <ClCompile Include="H2MOD\Modules\Accounts\Accounts.cpp" />
+    <ClCompile Include="H2MOD\Modules\Achievements\Achievements.cpp" />
+    <ClCompile Include="H2MOD\Modules\Shell\Config.cpp" />
+    <ClCompile Include="H2MOD\Modules\Console\ConsoleCommands.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\CustomLanguage.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\CustomMenu.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\CustomMenuGlobals.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\c_list_widget.cpp" />
+    <ClCompile Include="H2MOD\Modules\CustomMenu\c_screen_with_menu.cpp" />
+    <ClCompile Include="H2MOD\Modules\GamePhysics\Patches\ProjectileFix.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NoExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='DebugDedicatedServer|Win32'">NoExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="H2MOD\Modules\Input\Mouseinput.cpp" />
+    <ClCompile Include="H2MOD\Modules\MainMenu\Ranks.cpp" />
+    <ClCompile Include="H2MOD\Modules\Networking\Networking.cpp" />
+    <ClCompile Include="H2MOD\Modules\OnScreenDebug\OnscreenDebug.cpp" />
+    <ClCompile Include="H2MOD\Modules\RunLoop\RunLoop.cpp" />
+    <ClCompile Include="H2MOD\Modules\Shell\Startup\Startup.cpp" />
+    <ClCompile Include="H2MOD\Modules\Tweaks\Tweaks.cpp" />
+    <ClCompile Include="H2MOD\Modules\Updater\Updater.cpp" />
+    <ClCompile Include="H2MOD\Utils\Utils.cpp" />
+    <ClCompile Include="H2MOD\Variants\FireFight\FireFight.cpp" />
+    <ClCompile Include="H2MOD\Variants\GunGame\GunGame.cpp" />
+    <ClCompile Include="H2MOD\Variants\H2X\H2X.cpp" />
+    <ClCompile Include="H2MOD\Variants\HeadHunter\HeadHunter.cpp" />
+    <ClCompile Include="H2MOD\Variants\Infection\Infection.cpp" />
+    <ClCompile Include="H2MOD\Variants\VariantMPGameEngine.cpp" />
+    <ClCompile Include="H2MOD\Variants\VariantSystem.cpp" />
+    <ClCompile Include="Util\Base64.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugDedicatedServer|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="H2MOD\Modules\Shell\Debug\Debug.cpp" />
+    <ClCompile Include="util\filesys.cpp" />
+    <ClCompile Include="Util\hash.cpp" />
+    <ClCompile Include="Util\Hooks\Detour.cpp" />
+    <ClCompile Include="Util\Hooks\Hook.cpp" />
+    <ClCompile Include="xliveless.cpp" />
+    <ClCompile Include="XLive\achievements\XAchievements.cpp" />
+    <ClCompile Include="XLive\ServerList\ServerList.cpp" />
+    <ClCompile Include="XLive\xnet\net_utils.cpp" />
+    <ClCompile Include="XLive\xnet\NIC.cpp" />
+    <ClCompile Include="XLive\XNet\upnp.cpp" />
+    <ClCompile Include="XLive\XNet\XNetQoS.cpp" />
+    <ClCompile Include="XLive\XNet\xnet.cpp" />
+    <ClCompile Include="XLive\XNet\Sockets\XSocket.cpp" />
+    <ClCompile Include="XLive\XNet\IpManagement\XnIp.cpp" />
+    <ClCompile Include="XLive\Voice\XHVEngine.cpp" />
+    <ClCompile Include="XLive\XAM\xam.cpp" />
+    <ClCompile Include="XLive\xbox\xbox.cpp" />
+    <ClCompile Include="XLive\XSession\XSession.cpp" />
+    <ClCompile Include="XLive\XUser\XCustomAction.cpp" />
+    <ClCompile Include="XLive\XUser\XUser.cpp" />
+    <ClCompile Include="XLive\XUser\XUserContext.cpp" />
+    <ClCompile Include="XLive\XUser\XUserProperty.cpp" />
+    <ClCompile Include="XLive\XStorage\XStorage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3rdparty\detours\include\detours.h" />
+    <ClInclude Include="3rdparty\detours\include\detver.h" />
+    <ClInclude Include="3rdparty\directx\include\d3dx9.h" />
+    <ClInclude Include="3rdparty\directx\include\d3dx9anim.h" />
+    <ClInclude Include="3rdparty\directx\include\d3dx9core.h" />
+    <ClInclude Include="3rdparty\directx\include\d3dx9effect.h" />
+    <ClInclude Include="3rdparty\directx\include\d3dx9math.h" />
+    <ClInclude Include="3rdparty\directx\include\d3dx9mesh.h" />
+    <ClInclude Include="3rdparty\directx\include\d3dx9shader.h" />
+    <ClInclude Include="3rdparty\directx\include\d3dx9shape.h" />
+    <ClInclude Include="3rdparty\directx\include\d3dx9tex.h" />
+    <ClInclude Include="3rdparty\directx\include\d3dx9xof.h" />
+    <ClInclude Include="3rdparty\discord\discord_register.h" />
+    <ClInclude Include="3rdparty\discord\discord_rpc.h" />
+    <ClInclude Include="3rdparty\imgui\backends\imgui_impl_dx9.h" />
+    <ClInclude Include="3rdparty\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="3rdparty\imgui\imconfig.h" />
+    <ClInclude Include="3rdparty\imgui\imgui.h" />
+    <ClInclude Include="3rdparty\imgui\imgui_internal.h" />
+    <ClInclude Include="3rdparty\imgui\imstb_rectpack.h" />
+    <ClInclude Include="3rdparty\imgui\imstb_textedit.h" />
+    <ClInclude Include="3rdparty\imgui\imstb_truetype.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\codelength.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\connecthostport.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\igd_desc_parse.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\minisoap.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\minissdpc.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\miniupnpc.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\miniupnpctypes.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\miniupnpc_declspec.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\miniwget.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\minixml.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\portlistingparse.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\receivedata.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\upnpcommands.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\upnpdev.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\upnperrors.h" />
+    <ClInclude Include="3rdparty\miniupnpc\include\miniupnpc\upnpreplyparse.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\async.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\async_logger-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\async_logger.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\cfg\argv.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\cfg\env.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\cfg\helpers-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\cfg\helpers.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\common-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\common.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\circular_q.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\console_globals.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\file_helper-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\file_helper.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\fmt_helper.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\log_msg-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\log_msg.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\mpmc_blocking_q.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\null_mutex.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\os-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\os.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\periodic_worker-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\periodic_worker.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\registry-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\registry.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\thread_pool-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\details\thread_pool.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bin_to_hex.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bundled\chrono.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bundled\color.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bundled\core.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bundled\format-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bundled\format.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bundled\locale.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bundled\ostream.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bundled\posix.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bundled\printf.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\bundled\ranges.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\fmt.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\fmt\ostr.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\formatter.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\logger-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\logger.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\android_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\ansicolor_sink-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\ansicolor_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\base_sink-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\base_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\basic_file_sink-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\basic_file_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\daily_file_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\dist_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\msvc_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\null_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\ostream_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\rotating_file_sink-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\rotating_file_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\sink-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\stdout_color_sinks-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\stdout_color_sinks.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\stdout_sinks.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\syslog_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\systemd_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\wincolor_sink-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\sinks\wincolor_sink.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\spdlog-inl.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\spdlog.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\tweakme.h" />
+    <ClInclude Include="3rdparty\spdlog\include\spdlog\version.h" />
+    <ClInclude Include="3rdparty\tinyxml\tinyxml2.h" />
+    <ClInclude Include="Blam\Cache\CacheHeader.h" />
+    <ClInclude Include="Blam\Cache\DataTypes\BlamDataTypes.h" />
+    <ClInclude Include="Blam\Cache\DataTypes\BlamPrimitiveType.h" />
+    <ClInclude Include="Blam\Cache\DataTypes\BlamTag.h" />
+    <ClInclude Include="Blam\Cache\TagGroups\ai_mission_dialogue_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\antenna_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\biped_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\camera_track_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\crate_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\creature_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\device_control_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\device_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\device_light_fixture_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\device_machine_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\equipment_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\garbage_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\globals_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\hud_globals_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\item_collection_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\item_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\light_definition.h" />
+    <ClInclude Include="Blam\Cache\TagGroups\model_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\physics_model_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\render_model_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\multiplayer_globals_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\new_hud_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\object_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\projectile_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\scenario_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\scenario_lightmap_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\scenario_structure_bsp_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\scenery_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\shader_pass_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\user_interface_screen_widget_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\unit_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\user_interface_globals_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\user_interface_shared_globals_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\vehicle_collection_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\vehicle_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\weapon_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\shader_definition.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\weather_system_definition.hpp" />
+    <ClInclude Include="Blam\Common\Common.h" />
+    <ClInclude Include="Blam\Engine\DataArray\TagDataIterator.h" />
+    <ClInclude Include="Blam\Engine\Game\DamageData.h" />
+    <ClInclude Include="Blam\Engine\Game\GameEngineGlobals.h" />
+    <ClInclude Include="Blam\Engine\Game\GameGlobals.h" />
+    <ClInclude Include="Blam\Engine\Game\GameState.h" />
+    <ClInclude Include="Blam\Engine\Game\GameVariant.h" />
+    <ClInclude Include="Blam\Engine\Game\PhysicsConstants.h" />
+    <ClInclude Include="Blam\Engine\Networking\NetworkPrimitiveTypes.h" />
+    <ClInclude Include="Blam\Engine\Networking\Replication\ReplicationControlView.h" />
+    <ClInclude Include="Blam\Engine\Networking\Replication\ReplicationEntity.h" />
+    <ClInclude Include="Blam\Engine\Players\PlayerActions.h" />
+    <ClInclude Include="Blam\Engine\Networking\PlayerMotion.h" />
+    <ClInclude Include="Blam\Engine\Networking\PlayerPrediction.h" />
+    <ClInclude Include="Blam\Engine\Simulation\GameInterface\SimulationGameEntities.h" />
+    <ClInclude Include="Blam\Engine\Simulation\GameInterface\SimulationGameObjects.h" />
+    <ClInclude Include="Blam\Engine\Simulation\GameInterface\SimulationGameUnits.h" />
+    <ClInclude Include="Blam\Engine\Simulation\MachineID.h" />
+    <ClInclude Include="Blam\Engine\Simulation\SimulationActors.h" />
+    <ClInclude Include="Blam\Engine\Simulation\GameInterface\SimulationGameEvents.h" />
+    <ClInclude Include="Blam\Engine\Simulation\SimulationPlayers.h" />
+    <ClInclude Include="Blam\Engine\Simulation\SimulationTypeCollection.h" />
+    <ClInclude Include="Blam\Engine\Simulation\SimulationView.h" />
+    <ClInclude Include="Blam\Engine\Simulation\SimulationWorld.h" />
+    <ClInclude Include="Blam\Engine\Simulation\UnitControl.h" />
+    <ClInclude Include="Blam\Enums\HaloStrings.h" />
+    <ClInclude Include="Blam\LazyBlam\TagTable.h" />
+    <ClInclude Include="Blam\Cache\DataTypes\DataRef.h" />
+    <ClInclude Include="Blam\Math\integer_math.h" />
+    <ClInclude Include="Blam\Math\real_math.h" />
+    <ClInclude Include="Blam\Engine\DataArray\DataArray.h" />
+    <ClInclude Include="Blam\Math\real_vector3d.h" />
+    <ClInclude Include="CartographerDllConf.h" />
+    <ClInclude Include="H2MOD\Engine\Engine.h" />
+    <ClInclude Include="H2MOD\EngineHooks\EngineHooks.h" />
+    <ClInclude Include="H2MOD\GUI\imgui_integration\ImGui_Cartographer_Style.h" />
+    <ClInclude Include="H2MOD\GUI\imgui_integration\ImGui_Handler.h" />
+    <ClInclude Include="H2MOD\GUI\imgui_integration\ImGui_NetworkStatsOverlay.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\Accounts\c_account_create_menu.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\Accounts\c_account_list_menu.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\c_brightness_menu.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\c_error_menu.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\c_screen_widget.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\c_user_interface_widget.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\c_virtual_keyboard_menu.h" />
+    <ClInclude Include="H2MOD\Modules\MapManager\CustomMapDataCache\CustomMapDataCache.h" />
+    <ClInclude Include="H2MOD\Modules\CustomResolutions\CustomResolutions.h" />
+    <ClInclude Include="H2MOD\Modules\CustomVariantSettings\CustomVariantSettings.h" />
+    <ClInclude Include="H2MOD\Modules\DirectorHooks\DirectorHooks.h" />
+    <ClInclude Include="H2MOD\Modules\EventHandler\EventHandler.hpp" />
+    <ClInclude Include="H2MOD\Modules\GamePhysics\MeleeLunge.h" />
+    <ClInclude Include="H2MOD\Modules\HaloScript\HaloScript.h" />
+    <ClInclude Include="H2MOD\Modules\GamePhysics\Patches\MeleeFix.h" />
+    <ClInclude Include="H2MOD\Modules\HudElements\HudElements.h" />
+    <ClInclude Include="H2MOD\Modules\Input\ControllerInput.h" />
+    <ClInclude Include="H2MOD\Modules\Input\KeyboardInput.h" />
+    <ClInclude Include="H2MOD\Modules\Input\PlayerControl.h" />
+    <ClInclude Include="H2MOD\Modules\KantTesting\KantTesting.h" />
+    <ClInclude Include="H2MOD\Modules\MainLoopPatches\TestGameTimePrep.h" />
+    <ClInclude Include="H2MOD\Modules\MainLoopPatches\UncappedFPS2\UncappedFPS2.h" />
+    <ClInclude Include="H2MOD\Modules\MainLoopPatches\OriginalFPSLimiter\OriginalFPSLimiter.h" />
+    <ClInclude Include="H2MOD\Modules\MainMenu\MapSlots.h" />
+    <ClInclude Include="H2MOD\Modules\MapManager\MapManager.h" />
+    <ClInclude Include="Blam\Engine\Networking\NetworkMessageTypeCollection.h" />
+    <ClInclude Include="Blam\Engine\Memory\bitstream.h" />
+    <ClInclude Include="Blam\Engine\Networking\Transport\NetworkChannel.h" />
+    <ClInclude Include="Blam\Engine\Networking\Transport\NetworkObserver.h" />
+    <ClInclude Include="Blam\Engine\Networking\Session\NetworkSession.h" />
+    <ClInclude Include="H2MOD\Modules\Networking\OverridePackets\OverridePackets.h" />
+    <ClInclude Include="H2MOD\Modules\ObserverMode\ObserverMode.h" />
+    <ClInclude Include="H2MOD\Modules\PlayerRepresentation\PlayerRepresentation.h" />
+    <ClInclude Include="H2MOD\Modules\PlaylistLoader\PlaylistLoader.h" />
+    <ClInclude Include="H2MOD\Modules\RenderHooks\RenderHooks.h" />
+    <ClInclude Include="H2MOD\Modules\Shell\ServerConsole.h" />
+    <ClInclude Include="H2MOD\Modules\Shell\Shell.h" />
+    <ClInclude Include="H2MOD\Modules\Shell\Startup\WinMainH2.h" />
+    <ClInclude Include="H2MOD\Modules\SpecialEvents\SpecialEvents.h" />
+    <ClInclude Include="H2MOD\Modules\Stats\StatsHandler.h" />
+    <ClInclude Include="H2MOD\Modules\TagFixes\TagFixes.h" />
+    <ClInclude Include="H2MOD\Modules\UI\Pregame_Lobby.h" />
+    <ClInclude Include="H2MOD\Modules\UI\XboxLiveTaskProgress.h" />
+    <ClInclude Include="H2MOD\Tags\MetaExtender.h" />
+    <ClInclude Include="H2MOD\Tags\TagInterface.h" />
+    <ClInclude Include="H2MOD\Variants\FireFight\DeviceShop\DeviceShop.h" />
+    <ClInclude Include="H2MOD\Variants\Variants.h" />
+    <ClInclude Include="H2MOD\Variants\XboxTick\XboxTick.h" />
+    <ClInclude Include="H2MOD\Tags\MetaLoader\cache_loader.h" />
+    <ClInclude Include="H2MOD\Tags\MetaLoader\meta_struct.h" />
+    <ClInclude Include="H2MOD\Tags\MetaLoader\tag_loader.h" />
+    <ClInclude Include="Blam\LazyBlam\LazyBlam.hpp" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Util\curl-interface.h" />
+    <ClInclude Include="Util\Memory.h" />
+    <ClInclude Include="Util\SimpleIni.h" />
+    <ClInclude Include="XLive\Cryptography\Rc4.h" />
+    <ClInclude Include="Blam\Cache\DataTypes\StringID.h" />
+    <ClInclude Include="Blam\Cache\DataTypes\Strings.h" />
+    <ClInclude Include="Blam\Cache\DataTypes\TagRef.h" />
+    <ClInclude Include="Blam\Cache\DataTypes\TagBlock.h" />
+    <ClInclude Include="Blam\Cache\TagGroups.hpp" />
+    <ClInclude Include="Blam\Cache\TagGroups\character_definition.hpp" />
+    <ClInclude Include="Blam\Engine\Actor\Actor.h" />
+    <ClInclude Include="Blam\FileSystem\FiloInterface.h" />
+    <ClInclude Include="Blam\Engine\Game\GameTimeGlobals.h" />
+    <ClInclude Include="Blam\Engine\Game\HaloScript.h" />
+    <ClInclude Include="Blam\Engine\Objects\ObjectPlacementData.h" />
+    <ClInclude Include="Blam\Engine\Objects\Objects.h" />
+    <ClInclude Include="Blam\Engine\Players\PlayerControls.h" />
+    <ClInclude Include="Blam\Engine\Players\Players.h" />
+    <ClInclude Include="Blam\Engine\Game\GameOptions.h" />
+    <ClInclude Include="Blam\Math\BlamMath.h" />
+    <ClInclude Include="H2MOD.h" />
+    <ClInclude Include="H2MOD\Discord\DiscordInterface.h" />
+    <ClInclude Include="H2MOD\GUI\GUI.h" />
+    <ClInclude Include="H2MOD\Modules\Accounts\AccountCreate.h" />
+    <ClInclude Include="H2MOD\Modules\Accounts\AccountLogin.h" />
+    <ClInclude Include="H2MOD\Modules\Accounts\Accounts.h" />
+    <ClInclude Include="H2MOD\Modules\Achievements\Achievements.h" />
+    <ClInclude Include="H2MOD\Modules\Shell\Config.h" />
+    <ClInclude Include="H2MOD\Modules\Console\ConsoleCommands.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\CustomLanguage.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\CustomMenu.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\CustomMenuGlobals.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\c_list_widget.h" />
+    <ClInclude Include="H2MOD\Modules\CustomMenu\c_screen_with_menu.h" />
+    <ClInclude Include="H2MOD\Modules\GamePhysics\Patches\ProjectileFix.h" />
+    <ClInclude Include="H2MOD\Modules\Input\Mouseinput.h" />
+    <ClInclude Include="H2MOD\Modules\MainMenu\Ranks.h" />
+    <ClInclude Include="H2MOD\Modules\Networking\Networking.h" />
+    <ClInclude Include="H2MOD\Modules\OnScreenDebug\OnscreenDebug.h" />
+    <ClInclude Include="H2MOD\Modules\RunLoop\RunLoop.h" />
+    <ClInclude Include="H2MOD\Modules\Shell\Startup\Startup.h" />
+    <ClInclude Include="H2MOD\Modules\Tweaks\Tweaks.h" />
+    <ClInclude Include="H2MOD\Modules\Updater\Updater.h" />
+    <ClInclude Include="H2MOD\Utils\Utils.h" />
+    <ClInclude Include="H2MOD\Variants\FireFight\FireFight.h" />
+    <ClInclude Include="H2MOD\Variants\GunGame\GunGame.h" />
+    <ClInclude Include="H2MOD\Variants\H2X\H2X.h" />
+    <ClInclude Include="H2MOD\Variants\HeadHunter\HeadHunter.h" />
+    <ClInclude Include="H2MOD\Variants\Infection\Infection.h" />
+    <ClInclude Include="H2MOD\Variants\VariantMPGameEngine.h" />
+    <ClInclude Include="H2MOD\Variants\VariantSystem.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Util\Base64.h" />
+    <ClInclude Include="Util\ClipboardAPI.h" />
+    <ClInclude Include="H2MOD\Modules\Shell\Debug\Debug.h" />
+    <ClInclude Include="util\filesys.h" />
+    <ClInclude Include="Util\hash.h" />
+    <ClInclude Include="Util\Hooks\Detour.h" />
+    <ClInclude Include="Util\Hooks\Hook.h" />
+    <ClInclude Include="Util\log.h" />
+    <ClInclude Include="Util\ReadIniArguments.h" />
+    <ClInclude Include="xlivedefs.h" />
+    <ClInclude Include="xliveless.h" />
+    <ClInclude Include="XLive\achievements\XAchievements.h" />
+    <ClInclude Include="XLive\ServerList\ServerList.h" />
+    <ClInclude Include="XLive\xnet\NIC.h" />
+    <ClInclude Include="XLive\xnet\net_utils.h" />
+    <ClInclude Include="XLive\XNet\upnp.h" />
+    <ClInclude Include="XLive\XNet\XNetQoS.h" />
+    <ClInclude Include="XLive\XNet\xnet.h" />
+    <ClInclude Include="XLive\XNet\Sockets\XSocket.h" />
+    <ClInclude Include="XLive\XNet\IpManagement\XnIp.h" />
+    <ClInclude Include="XLive\Voice\XHVEngine.h" />
+    <ClInclude Include="XLive\XAM\xam.h" />
+    <ClInclude Include="XLive\xbox\xbox.h" />
+    <ClInclude Include="XLive\XSession\XSession.h" />
+    <ClInclude Include="XLive\XUser\XCustomAction.h" />
+    <ClInclude Include="XLive\XUser\XUser.h" />
+    <ClInclude Include="XLive\XUser\XUserContext.h" />
+    <ClInclude Include="XLive\XUser\XUserProperty.h" />
+    <ClInclude Include="XLive\XStorage\XStorage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="3rdparty\directx\include\d3dx9math.inl" />
+    <None Include="xlive.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
