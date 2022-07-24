@@ -7,7 +7,7 @@ Bạn có thể cập nhật tiến trình dịch ở đây: [VietHoaGame Thread
 
 Việt hóa đơn giản chỉ là một file ini custom localization cho [Halo 2: Project Cartographer](http://www.halo2pc.com/) nó chả liên quan sẽ có mã độc gì, nếu bạn vẫn thực sự lo có virus thì source code ngay ở trên
 
-Demo đã ra mắt bạn phải đổi qua tag demo để download release.
+Demo đã ra mắt bạn phải đổi qua tag demo để download release. Lưu ý: Bạn không thể chơi multiplayer của Cartographer vì họ không cho phép, sau khi bạn thử xong demo và muốn chơi multiplayer thì bạn phải xóa file h2customlanguage.ini và chạy lại game rồi vào cài đặt của Cartographer để update phiên bản mới nhất.
 
 # Kết
 Trong lúc đợi Việt hóa ra mắt bạn có thể [mua bản quyền Halo 2](http://goo.gl/oyQBc) (khá là hiếm) hoặc "thuốc" nó thế nào cũng được chỉ cần là phiên bản mới nhất để sử dụng bản mod [Halo 2: Project Cartographer](http://www.halo2pc.com/)
