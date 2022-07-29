@@ -1,10 +1,10 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "XUserContext.h"
+#include "Blam\Engine\Networking\NetworkMessageTypeCollection.h"
 #include "H2MOD\Discord\DiscordInterface.h"
-#include "H2MOD\Modules\Config\Config.h"
-#include "H2MOD\Modules\Networking\Networking.h"
-#include "H2MOD\Modules\Startup\Startup.h"
+#include "H2MOD\Modules\Shell\Config.h"
+#include "H2MOD\Modules\Shell\Startup\Startup.h"
 #include "XLive\xbox\xbox.h"
 
 extern void Check_Overlapped(PXOVERLAPPED pOverlapped);
@@ -38,10 +38,10 @@ static const std::unordered_map <std::string, std::string> singleplayer_maps
 
 static const std::unordered_map <int, std::pair<std::string, std::string>> campaign_difficulty_list
 {
-	{ 0,{ "campaign_easy", "Easy" } },
-	{ 1,{ "campaign_normal", "Normal" } },
-	{ 2,{ "campaign_medium", "Heroic" } },
-	{ 3,{ "campaign_hard", "Legendary" } }
+	{ 0,{ "campaign_easy", "Độ Khó: Dễ" } },
+	{ 1,{ "campaign_normal", "Độ Khó: Thường" } },
+	{ 2,{ "campaign_medium", "Độ Khó: Lão Luyện" } },
+	{ 3,{ "campaign_hard", "Độ Khó: Huyền Thoại" } }
 };
 
 static const std::unordered_map <int, std::string> game_mode_list
@@ -58,11 +58,11 @@ static const std::unordered_map <int, std::string> game_mode_list
 void update_player_count()
 {
 	s_network_session* session = nullptr;
-	if (NetworkSession::getCurrentNetworkSession(&session))
+	if (NetworkSession::GetCurrentNetworkSession(&session))
 	{
 		DiscordInterface::SetPlayerCountInfo(
-			session->membership.player_count, 
-			session->parameters.max_party_players);
+			session->membership[0].player_count, 
+			session->parameters[0].max_party_players);
 	}
 	else
 	{
@@ -79,7 +79,7 @@ std::string getEnglishMapName()
 
 std::string getVariantName()
 {
-	std::wstring variant = NetworkSession::getGameVariantName();
+	std::wstring variant = NetworkSession::GetGameVariantName();
 	variant = variant.substr(0, variant.find_last_not_of(L"\xE008\t\n ") + 1);
 	return wstring_to_string.to_bytes(variant);
 }
@@ -114,7 +114,7 @@ DWORD WINAPI XUserSetContext(DWORD dwUserIndex, DWORD dwContextId, DWORD dwConte
 	LOG_TRACE_XLIVE("XUserSetContext  (userIndex = {0}, contextId = {1}, contextValue = {2})",
 		dwUserIndex, dwContextId, dwContextValue);
 
-	if (Memory::isDedicatedServer() || !H2Config_discord_enable || H2GetInstanceId() > 1)
+	if (Memory::IsDedicatedServer() || !H2Config_discord_enable || H2GetInstanceId() > 1)
 		return ERROR_SUCCESS;
 
 	if (dwContextId == 0x00000003)
@@ -155,7 +155,7 @@ DWORD WINAPI XUserSetContext(DWORD dwUserIndex, DWORD dwContextId, DWORD dwConte
 			auto diff = campaign_difficulty_list.at(diff_level);
 			DiscordInterface::SetGameState(
 				map_name,
-				"Campaign",
+				"Chiến Dịch",
 				level_name,
 				diff.first,
 				diff.second
@@ -171,7 +171,7 @@ DWORD WINAPI XUserSetContext(DWORD dwUserIndex, DWORD dwContextId, DWORD dwConte
 
 			DiscordInterface::SetGameState(
 				map_name,
-				"Multiplayer",
+				"Chơi Mạng",
 				getEnglishMapName(),
 				gamemode_id_to_string(game_engine_type),
 				getVariantName()
@@ -181,23 +181,23 @@ DWORD WINAPI XUserSetContext(DWORD dwUserIndex, DWORD dwContextId, DWORD dwConte
 		}
 		case ContextPresence::mainmenu:
 		{
-			DiscordInterface::SetGameState("default", "In main menu");
+			DiscordInterface::SetGameState("default", "Đang ở menu chính");
 			break;
 		}
 		case ContextPresence::lobby:
 		{
-			DiscordInterface::SetGameState("default", "In Lobby");
+			DiscordInterface::SetGameState("default", "Đang ở sảnh chờ");
 			update_player_count();
 			break;
 		}
 		case ContextPresence::server_browser:
 		{
-			DiscordInterface::SetGameState("default", "Browsing server list");
+			DiscordInterface::SetGameState("default", "Đang xem danh sách server");
 			break;
 		}
 		case ContextPresence::results:
 		{
-			DiscordInterface::SetGameState("default", "Reading carnage report", true);
+			DiscordInterface::SetGameState("default", "Đang xem kết quả trận đấu chơi mạng", true);
 			break;
 		}
 		}
