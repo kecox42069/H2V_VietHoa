@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "Memory.h"
 
@@ -59,15 +59,15 @@ void Memory::Initialize()
 	game_info.process_type = DetectProcessType();
 
 	static const char* unsupported_game_version_error =
-		"Project Cartographer loaded into unsupported game version, will now exit!";
+		"Project Cartographer dang duoc chay voi phien ban Halo 2 khong duoc ho tro, mod se khong duoc chay!";
 
 	static const char* unsupported_game_version_error_help =
-		"Download latest official patch at \"halo2pc.com/downloads\", Latest Official Update.zip";
+		"Vui long chay file Update.exe trong folder redists hoac tai file update tai \"halo2pc.com/downloads\" de update";
 
 	switch (game_info.process_type)
 	{
 	case H2Type::Invalid:
-		MessageBoxA(NULL, "Project Cartographer loaded into unsupported process, will now exit!", "ERROR!", MB_ICONERROR);
+		MessageBoxA(NULL, "Project Cartographer dang duoc chay voi phien ban Halo 2 khong duoc ho tro, mod se khong duoc chay!", "ERROR!", MB_ICONERROR);
 		TerminateProcess(GetCurrentProcess(), 1);
 		break;
 	case H2Type::UnsupportedVersion:
