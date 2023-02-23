@@ -1,0 +1,5 @@
+﻿  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30145 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I.\ /I.\3rdparty\ /I.\3rdparty\libcurl /I.\3rdparty\imgui /I.\3rdparty\spdlog\include /I.\3rdparty\miniupnpc\include /I.\3rdparty\detours\include /I.\3rdparty\directx\include /ZI /W0 /WX- /diagnostics:column /Od /Oy- /D WIN32 /D CURL_STATICLIB /D _CRT_SECURE_NO_WARNINGS /D _DEBUG /D _WINDOWS /D _USRDLL /D xliveless_EXPORTS /D MINIUPNP_STATICLIB /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHa /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Yu"stdafx.h" /Fp".\Debug/xliveless.pch" /Fo".\Debug/" /Fd".\Debug/vc142.pdb" /external:W0 /Gd /TP /wd4800 /wd4244 /analyze- /FC /errorReport:prompt /utf-8 H2MOD\GUI\GUI.cpp
+  GUI.cpp
+  Project_Cartographer.vcxproj -> C:\Users\Administrator\git\cartographer\Halo2\xlive.dll
