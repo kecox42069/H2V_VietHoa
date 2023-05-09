@@ -23,7 +23,7 @@ static const std::unordered_map <std::string, std::string> singleplayer_maps
 	{ "01a_tutorial", "Kho Vũ Khí" },
 	{ "01b_spacestation", "Trạm Cairo" },
 	{ "03a_oldmombasa", "Ngoại Ô" },
-	{ "03b_newmombasa", "Metropolis" },
+	{ "03b_newmombasa", "Đô Thị" },
 	{ "04a_gasgiant", "Tên Arbiter" },
 	{ "04b_floodlab", "Tiên Tri (Oracle)" },
 	{ "05a_deltaapproach", "Delta Halo" },
